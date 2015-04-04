@@ -1,6 +1,10 @@
 <h1>Editing Link</h1>
-
+<% if @link.user == current_user %>
 <%= render 'form' %>
+
 
 <%= link_to 'Show', @link %> |
 <%= link_to 'Back', links_path %>
+<% else %>
+<h1> Stop trying to hack my newbie app, bitch!</h1>
+<% end %>
